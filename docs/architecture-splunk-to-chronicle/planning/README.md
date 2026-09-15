@@ -22,6 +22,22 @@ pour les dashboards/logs applicatifs.
 - `schema-architecture-cible-v2.png` — schéma d'architecture mis à jour (3 flux :
   CloudWatch/Chronicle, rsyslog/Forwarder AIX, Dynatrace/OneAgent).
 - `planning-macro-visuel.png` — visuel du planning macro (Gantt).
+- `pmo-suivi-migration-chronicle-dynatrace.xlsx` — **version PMO** du même
+  planning, restructurée pour un pilotage de type comité de projet :
+  - **Dashboard** : KPI (jours restants, avancement global, tâches en retard),
+    synthèse par chantier, prochains jalons — tout calculé par formule.
+  - **Jalons** : les 7 jalons clés du projet, avec statut auto (Dépassé /
+    Imminent / Planifié) recalculé à l'ouverture du fichier.
+  - **Planning Macro** et **Planning Micro** : mêmes données que ci-dessus,
+    enrichies d'une colonne **RAG** (Vert/Orange/Rouge) et d'un **% d'avancement**
+    calculés par formule à partir du statut et de la date de fin (donc vivants :
+    rouvrir le fichier un autre jour recalcule automatiquement les retards).
+  - **RACI** : matrice Responsible/Accountable/Consulted/Informed par chantier
+    et par rôle (Chef de projet, équipes Cloud/AWS, AIX/Unix, Sécurité/SIEM,
+    David/Dynatrace, comité de pilotage).
+  - **RAID Log** : Risques, Hypothèses, Problèmes (dont l'incident AIX, classé
+    comme Problème puisqu'il s'est déjà produit) et Dépendances.
+  - **Suivi Dynatrace** : identique au classeur précédent.
 
 ## Points clés
 
