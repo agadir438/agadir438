@@ -38,6 +38,19 @@ pour les dashboards/logs applicatifs.
   - **RAID Log** : Risques, Hypothèses, Problèmes (dont l'incident AIX, classé
     comme Problème puisqu'il s'est déjà produit) et Dépendances.
   - **Suivi Dynatrace** : identique au classeur précédent.
+- `rapport-pmo-migration-chronicle-dynatrace.docx` — **version Word** du rapport
+  de suivi PMO : mêmes contenus que le classeur PMO (résumé exécutif, schéma
+  d'architecture, planning macro/micro, matrice RACI, RAID Log, suivi Dynatrace,
+  prochaines étapes), mis en forme comme un document à partager ou imprimer.
+
+## Contenu — quel fichier pour quel usage
+
+- Besoin d'un **support de comité** figé, à lire ou imprimer : `rapport-pmo-migration-chronicle-dynatrace.docx`
+  (ou `planning-migration-chronicle-dynatrace.pdf` pour la version non éditable).
+- Besoin de **piloter/mettre à jour** le planning au fil de l'eau (statuts, %
+  avancement, RAG calculés automatiquement) : `pmo-suivi-migration-chronicle-dynatrace.xlsx`.
+- Besoin de la **première version** du classeur (Résumé + schémas intégrés,
+  sans RACI/RAID) : `planning-migration-chronicle-dynatrace.xlsx`.
 
 ## Points clés
 
