@@ -49,6 +49,13 @@ pour les dashboards/logs applicatifs.
   s'installer directement sur la version d'AIX en place ; l'architecture retenue
   n'installe donc aucun agent sur AIX (relais `syslog` natif uniquement vers une
   VM Forwarder Linux dédiée).
+- **Archivage S3 confirmé (non optionnel)** : les deux flux sécurité écrivent
+  désormais directement dans le même bucket S3 — les logs Linux/Windows via
+  l'export CloudWatch, et les logs AIX via le relais `rsyslog` — avec des
+  préfixes distincts par OS. Ce flux d'archivage est indépendant de Dynatrace.
+- **Dynatrace OneAgent installé par service** : le déploiement se fait à la
+  granularité applicative (par service), et non simplement par hôte. Les logs
+  collectés par OneAgent restent dans Dynatrace et ne transitent pas par S3.
 
 Les noms d'équipes/owners utilisés (« Équipe Cloud/AWS », « Équipe AIX/Unix »,
 « Chef de projet migration », etc.) sont des libellés génériques à remplacer par
