@@ -14,9 +14,21 @@ Operations), avec :
 
 ## Contenu
 
-- `architecture-splunk-to-chronicle.pdf` — document complet (contexte, schéma,
+- `architecture-splunk-to-chronicle.pdf` — document global (contexte, schéma d'ensemble,
   détail des composants, sécurité, plan de migration par phases, recommandations).
-- `schema-architecture.png` — schéma d'architecture seul, en image haute résolution.
+- `schema-architecture.png` — schéma d'architecture global, en image haute résolution.
+
+Deux volets détaillés par filière de collecte :
+
+- `architecture-cloudwatch-linux-windows.pdf` + `schema-cloudwatch-linux-windows.png` —
+  architecture dédiée à la collecte **Linux/Windows** via l'agent unifié Amazon CloudWatch.
+- `architecture-rsyslog-aix.pdf` + `schema-rsyslog-aix.png` — architecture dédiée à la
+  collecte **AIX** via un relais rsyslog central en haute disponibilité, avec pont vers
+  CloudWatch.
+
+Les deux volets se raccordent au même socle commun (CloudWatch Logs → Kinesis Firehose →
+S3 pour l'archivage, Lambda + Chronicle Ingestion API pour le SIEM), détaillé dans le volet
+CloudWatch Linux/Windows.
 
 ## Hypothèse
 
